@@ -28,7 +28,7 @@ namespace _01_AppMvcCore
 
 
 		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services, IWebHostEnvironment env) // Ajout de 'IWebHostEnvironment' pour test de l'environnement de travail.
+		public void ConfigureServices(IServiceCollection services/*, IWebHostEnvironment env*/) // Ajout de 'IWebHostEnvironment' pour test de l'environnement de travail.
 		{
 			#region Injection de d�pendance du Service d'authentification
 			
@@ -62,7 +62,7 @@ namespace _01_AppMvcCore
 				options.MinimumSameSitePolicy = SameSiteMode.Strict;
 				options.HttpOnly = HttpOnlyPolicy.Always;
 				options.Secure = CookieSecurePolicy.Always;
-				options.Secure = env.IsDevelopment() ? CookieSecurePolicy.None : CookieSecurePolicy.Always;
+				//options.Secure = env.IsDevelopment() ? CookieSecurePolicy.None : CookieSecurePolicy.Always;
 			});
 
 			#endregion
