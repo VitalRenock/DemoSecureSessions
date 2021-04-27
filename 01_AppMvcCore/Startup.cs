@@ -22,14 +22,39 @@ namespace _01_AppMvcCore
 
 		public IConfiguration Configuration { get; }
 
+
+
+
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddControllersWithViews();
-
-			services.AddSingleton<IAuthService, AuthService>();
+			#region Injection de dépendance du Service d'authentification
 			
+			services.AddSingleton<IAuthService, AuthService>();
+
+			#endregion
+
+			#region Configuration d'une Session
+
+			// Ajout d'un espace en mémoire pour stocker les entités
+			services.AddDistributedMemoryCache();
+
+			// Création et configuration de la Session
+			services.AddSession(options =>
+			{
+				options.IdleTimeout = TimeSpan.FromSeconds(10);
+				options.Cookie.HttpOnly = true;
+				options.Cookie.IsEssential = true;
+			}); 
+
+			#endregion
+
+			services.AddControllersWithViews();
 		}
+
+
+
+
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -50,6 +75,10 @@ namespace _01_AppMvcCore
 			app.UseRouting();
 
 			app.UseAuthorization();
+
+			#region Configuration de l'app pour utilisation du système de Session
+			app.UseSession(); 
+			#endregion
 
 			app.UseEndpoints(endpoints =>
 			{
