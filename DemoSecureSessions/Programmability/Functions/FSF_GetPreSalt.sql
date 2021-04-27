@@ -1,0 +1,12 @@
+﻿CREATE FUNCTION [dbo].[FSF_GetPreSalt]
+(
+)
+RETURNS NVARCHAR(2048)
+AS
+BEGIN
+RETURN N'kmRYA%ux*y322RzMd_dC#j@8ZsE_RZFRqBNjLuR&^yV8dg4R_NRDH_?9VrAUWNm&e2e*qJUT5-+ph4t%F2RSj+nnFG4#MLJA3N%Kjgr+vHdy+kYJP-nvr9Qf+4A7S_Zm#%=VT2FS*#B=wFcTL$c%3puT8Tzw!jk84V26rswN?62mEt+Fr$TqA6H=NnwJm6j3V_h-zmxKzVvAej?5QKB7cE*ckPpZh3m29yFz*C*-^6ZHUvHjz8ymuDb7x-#&a#bYe!MdV5mRty6+9BSe_Fc%cJFtBbX!R*JPW+Pvr*xcC-8dFvjv$9NxQG$gewCtFgF4s*pBQfjmr#zmf@^j+8dwwdGg4pVvze=jR?rD9nh%*HL9*9pxQJcW^gbQSuBYs!KXYq2kZ&$JW$#VFeC%pfY_9hxnpHJEj?ABd#5mpn+fu7h3bkRA5n_EzVRYFB483%fP^GkwA&?AP8PkB=ytFSf%Q8KsM*3hXk3Q$5aG7mZJyRLZk+eH6WWnJS$7vu2&+z3q4KqSJMrDLE5*#?4bzCZT7jB-j^pZfNL=4uyTG2&mX@P7q+KZrmrVPFRGg4Q5G&2rE!z6LQReEVBRLvDqD6%7D?WwQL3cAf5qDJXZA9%?MFWwmsEemaXw!YkSwsnQ2kz3KyP8tvAgzCWhzH%=e@wKn?383gNua4gYAsaSPswG92tUx?%u!d!tHEmQxpmpvtBTH@_buQ4GVGG7vLngwD7d6C^8-pSVSzM^Y6mz3LKL!Vy@YsEpM*3LF+9MuEg8Lhfn!=d9Wr&4_CkS+Bum&ELUemYFC=rhNZuzh^PEA6A=-vZ&s5sD_eJhgTQ9QYVZ3?6*7#9%pB6?Dn*5q76jfwJ&d+ZQmsN@_3AyWSUP-NLw$D=9bB7UxPBYN9&DrU72D*TLPH-z8N3%kGmeyDfEbk9Q%+^Mku*BdNXny73_rRXcNU%W=MEV8GxjAkkUY&TAdBQPk?#fBV+XN2na*^Qr=rkS+p=XUfSwdS+WgKkvMs+vYt+YhamrkRtYMkT3yVQsH$eXm#J$6a#%kW@!VthZPQJ@sq#@Xs9v!5LGfe=x3z4@&Zt2kpy-_Gt+Hd=-LRNKEw%%B&BcL_yWC^q*juZR3hfKCQzxa8^uEZ^MZen3u7t^ZFaDYAD8kTfuEwLjV+R!=-Q9jjFMm!d%W#HJmN*WFFL#-!sgr$w&S_V6yJ$nt4e3euKtHcL?5Wq6sm+!gz@tASSE!5FMzAP9bvu4nV7&g56#TFZeLkY9s#AW_3EG8#bGb9bDj&c9%r$F?fK3yf6Szq-N!8!wy6qAX?CNXUTurePNE#pFxBGa^x+L9x66k+D-*qCYk&9NaaVLF%+Pd%8Z*d$as!B4aP@dT*U+HQ9&NMbq4B$@jKzNbgaH=G^E@Pq4JZYr5yr?7j9Azxzg+qaHabt$Ny43npbUXk$Dnrx4C-8y&BsWJEeSHKk#uy-f6xpVMq*hJqH*T!P229y?dXj-t8T#x?#C*cYpS-8uvKvb&VQeun_CV5#Ve3B@agfspWznL-wNMy95yj9MUmmrd&UB*Qrp4cfy*LhnFeUsN8sHh8ahgkPR%ATG%f%umYX!$4j3SAYmJG32%gAKZP3m@5xa5n*Xq=#X*QMnJ!=ux?SAfT%n@eUgJ3y$^vhn@fB@AYr&!fZGJqFkEa#YpW_FGv8tz4%%cxgF=fcWB4jheGj6shee3VfqdPXX*$5v#Uv*w3PNJXq9L*GYkj!PKfk9=_8-@Xn%h+c*Au=x9h8KhQZJ?PjxFCA-hjpLMHJggUwp96DW57M*NZstNAZYy^=D7byZpHjLuXNu%Q!WCwzJdeWuBB*@fBq=MFsbPB!6V2Kn?Bjh_Crn*GWz%ef6h_eQZEV-KR-kFJhe$Zqs3Q8KN9Jb-r&$8u*yPWv#VkQE#hpK3ECsWhh?YHmHqF%u!3Ys%pG%uWzBHJa8g5WLqzsAeKCf6LKmvCz%@wGT6+C*Ma-QY$KXQ2%2F-yuTuC@Ujbv8^jn69tYq5hQ?^yZp532M36LRcJ!EWT8T*Z7TE_YGed@-BFzX-xh3p?$Bkwn2xYn$^y8Lah8';
+END
+/*
+Génération du mot de passe sur le site https://passwordsgenerator.net/
+>>> Pourquoi N'' ? > Unicode .. 
+*/
