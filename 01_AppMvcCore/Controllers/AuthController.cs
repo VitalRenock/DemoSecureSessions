@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using _01_AppMvcCore.Models;
 using _01_AppMvcCore.Services;
+using Microsoft.AspNetCore.Http;
+using _01_AppMvcCore.Mapper;
 
 namespace _01_AppMvcCore.Controllers
 {
@@ -55,6 +57,12 @@ namespace _01_AppMvcCore.Controllers
 		public IActionResult Login(string email, string password)
 		{
 			User user = _authService.Login(email, password);
+
+			if (user != null)
+			{
+				HttpContext.Session.Set<User>("CurrentUser", user);
+				HttpContext.Session.Set<bool>("IsLog", true);
+			}
 
 			return RedirectToAction("Index", "Home", user);
 		}

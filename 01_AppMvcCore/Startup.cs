@@ -1,6 +1,7 @@
-using _01_AppMvcCore.Services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using VitalTools.Database.Formation;
+using _01_AppMvcCore.Services;
 
 namespace _01_AppMvcCore
 {
@@ -24,9 +27,8 @@ namespace _01_AppMvcCore
 
 
 
-
 		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services)
+		public void ConfigureServices(IServiceCollection services, IWebHostEnvironment env) // Ajout de 'IWebHostEnvironment' pour test de l'environnement de travail.
 		{
 			#region Injection de dépendance du Service d'authentification
 			
@@ -34,7 +36,7 @@ namespace _01_AppMvcCore
 
 			#endregion
 
-			#region Configuration d'une Session
+			#region 01 - Configuration d'une Session
 
 			// Ajout d'un espace en mémoire pour stocker les entités
 			services.AddDistributedMemoryCache();
@@ -42,10 +44,25 @@ namespace _01_AppMvcCore
 			// Création et configuration de la Session
 			services.AddSession(options =>
 			{
-				options.IdleTimeout = TimeSpan.FromSeconds(10);
+				// On indique combien de temps la session est maintenue si l'utilisateur est inactif.
+				options.IdleTimeout = TimeSpan.FromMinutes(20);
+				// On indique si le cookie de session sera disponible dans les scripts coté-client.
 				options.Cookie.HttpOnly = true;
+				// On indique si le cookie est indispensable au fonctionnement du site.
 				options.Cookie.IsEssential = true;
-			}); 
+			});
+
+			#endregion
+
+			#region Secure your Cookies
+
+			services.Configure<CookiePolicyOptions>(options =>
+			{
+				options.MinimumSameSitePolicy = SameSiteMode.Strict;
+				options.HttpOnly = HttpOnlyPolicy.Always;
+				options.Secure = CookieSecurePolicy.Always;
+				options.Secure = env.IsDevelopment() ? CookieSecurePolicy.None : CookieSecurePolicy.Always;
+			});
 
 			#endregion
 
@@ -76,9 +93,23 @@ namespace _01_AppMvcCore
 
 			app.UseAuthorization();
 
-			#region Configuration de l'app pour utilisation du système de Session
-			app.UseSession(); 
+
+
+			#region 02 - On indique à l'application d'utiliser un système de 'Session'
+
+			app.UseSession();
+
 			#endregion
+
+
+
+			#region Secure Your Cookies
+
+			app.UseCookiePolicy();
+
+			#endregion
+
+
 
 			app.UseEndpoints(endpoints =>
 			{

@@ -20,6 +20,7 @@ namespace _01_AppMvcCore.Controllers
 
 		public IActionResult Index(User user)
 		{
+
 			if (user is null)
 				return View();
 			else
