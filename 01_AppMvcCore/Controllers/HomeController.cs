@@ -1,4 +1,5 @@
-﻿using _01_AppMvcCore.Models;
+﻿using _01_AppMvcCore.Mapper;
+using _01_AppMvcCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,8 +19,10 @@ namespace _01_AppMvcCore.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index(User user)
+		public IActionResult Index()
 		{
+			// Récupération de l'utilisateur dans le contrôlleur Home
+			User user = HttpContext.Session.Get<User>("CurrentUser");
 
 			if (user is null)
 				return View();

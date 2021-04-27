@@ -14,17 +14,24 @@ namespace _01_AppMvcCore.Mapper
 	public static class ISessionExtension
 	{
 		/// <summary>
-		/// Méthode permettant d'ajouter un objet (qui sera sérialisé) dans la Session
+		/// Méthode permettant d'ajouter un objet (qui sera sérialisé) dans la Session (HttpContext.Session)
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="session"></param>
-		/// <param name="key"></param>
-		/// <param name="value"></param>
+		/// <param name="key">Clé pour l'objet</param>
+		/// <param name="value">L'objet</param>
 		public static void Set<T>(this ISession session, string key, T value)
 		{
 			session.SetString(key, JsonSerializer.Serialize(value));
 		}
 
+		/// <summary>
+		/// Méthode permettant de récupérer un objet sérialisé depuis la Session (HttpContext.Session)
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="session"></param>
+		/// <param name="key">Clé pour l'objet</param>
+		/// <returns>L'objet à la clé indiqué</returns>
 		public static T Get<T>(this ISession session, string key)
 		{
 			string value = session.GetString(key);
