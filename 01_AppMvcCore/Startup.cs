@@ -30,7 +30,7 @@ namespace _01_AppMvcCore
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services/*, IWebHostEnvironment env*/) // Ajout de 'IWebHostEnvironment' pour test de l'environnement de travail.
 		{
-			#region Injection de dépendance du Service d'authentification
+			#region Injection de dï¿½pendance du Service d'authentification
 			
 			services.AddSingleton<IAuthService, AuthService>();
 
@@ -38,15 +38,15 @@ namespace _01_AppMvcCore
 
 			#region 01 - Configuration d'une Session
 
-			// Ajout d'un espace en mémoire pour stocker les entités
+			// Ajout d'un espace en mï¿½moire pour stocker les entitï¿½s
 			services.AddDistributedMemoryCache();
 
-			// Création et configuration de la Session
+			// Crï¿½ation et configuration de la Session
 			services.AddSession(options =>
 			{
 				// On indique combien de temps la session est maintenue si l'utilisateur est inactif.
 				options.IdleTimeout = TimeSpan.FromMinutes(20);
-				// On indique si le cookie de session sera disponible dans les scripts coté-client.
+				// On indique si le cookie de session sera disponible dans les scripts cotï¿½-client.
 				options.Cookie.HttpOnly = true;
 				// On indique si le cookie est indispensable au fonctionnement du site.
 				options.Cookie.IsEssential = true;
@@ -56,6 +56,7 @@ namespace _01_AppMvcCore
 
 			#region Secure your Cookies
 
+			// Hello C'est Romain ! (test)
 			services.Configure<CookiePolicyOptions>(options =>
 			{
 				options.MinimumSameSitePolicy = SameSiteMode.Strict;
@@ -95,7 +96,7 @@ namespace _01_AppMvcCore
 
 
 
-			#region 02 - On indique à l'application d'utiliser un système de 'Session'
+			#region 02 - On indique ï¿½ l'application d'utiliser un systï¿½me de 'Session'
 
 			app.UseSession();
 
