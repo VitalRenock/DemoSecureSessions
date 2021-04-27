@@ -9,3 +9,9 @@ C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\DemoSecureSess
 C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\DemoSecureSessions\obj\Debug\00_DB.sqlprojAssemblyReference.cache
 C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\DemoSecureSessions\obj\Debug\DemoSecureSessions.dll
 C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\DemoSecureSessions\obj\Debug\DemoSecureSessions.pdb
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\bin\Debug\00_DB.dacpac
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\bin\Debug\DemoSecureSessions.dll
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\bin\Debug\DemoSecureSessions.pdb
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\obj\Debug\00_DB.sqlprojAssemblyReference.cache
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\obj\Debug\DemoSecureSessions.dll
+C:\Users\renau\source\repos\DemoSecureSessions\DemoSecureSessions\00_DB\obj\Debug\DemoSecureSessions.pdb

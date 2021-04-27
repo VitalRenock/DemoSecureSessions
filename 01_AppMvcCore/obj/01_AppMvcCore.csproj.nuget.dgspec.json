@@ -4,16 +4,6 @@
     "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\01_AppMvcCore\\01_AppMvcCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj",
-        "projectName": "VitalTools",
-        "projectPath": "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj"
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
     "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\01_AppMvcCore\\01_AppMvcCore.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -38,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj": {
-                "projectPath": "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj"
+              "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj": {
+                "projectPath": "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj"
               }
             }
           }
@@ -83,6 +73,16 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj",
+        "projectName": "VitalTools",
+        "projectPath": "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

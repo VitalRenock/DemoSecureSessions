@@ -6489,8 +6489,8 @@
     },
     "VitalTools/1.0.0": {
       "type": "project",
-      "path": "../../../../../OneDrive/Projets/Applications/My_DotNET_ToolBoxes/VitalTools/VitalTools/VitalTools.csproj",
-      "msbuildProject": "../../../../../OneDrive/Projets/Applications/My_DotNET_ToolBoxes/VitalTools/VitalTools/VitalTools.csproj"
+      "path": "../VitalTools/VitalTools.csproj",
+      "msbuildProject": "../VitalTools/VitalTools.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6527,8 +6527,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj": {
-              "projectPath": "C:\\Users\\renau\\OneDrive\\Projets\\Applications\\My_DotNET_ToolBoxes\\VitalTools\\VitalTools\\VitalTools.csproj"
+            "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj": {
+              "projectPath": "C:\\Users\\renau\\source\\repos\\DemoSecureSessions\\DemoSecureSessions\\VitalTools\\VitalTools.csproj"
             }
           }
         }
